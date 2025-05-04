@@ -50,10 +50,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-      {/* <AppsContainer trendingApp={trendingApp} title="Trending Apps"></AppsContainer>
-      <AppsContainer productivityApp={productivityApp} title="Productivity Apps"></AppsContainer>
-      <AppsContainer healthcareApp={healthcareApp} title="Healthcare Apps"></AppsContainer>
-      <AppsContainer educationApp={educationApp} title="Education Apps"></AppsContainer> */}
     </div>
   );
 };
