@@ -13,7 +13,7 @@ const Navbar = () => {
       <NavLink>
         <h2 className=" md:px-6 md:py-2 px-2 bg-accent rounded-xl">Apps</h2>
       </NavLink>
-      <NavLink>MyProfile</NavLink>
+      <NavLink to="/profile">MyProfile</NavLink>
       <NavLink className="btn btn-secondary font-bold" to="/login">
         Login
       </NavLink>
