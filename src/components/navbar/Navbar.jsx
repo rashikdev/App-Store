@@ -14,7 +14,7 @@ const Navbar = () => {
         <h2 className=" md:px-6 md:py-2 px-2 bg-accent rounded-xl">Apps</h2>
       </NavLink>
       <NavLink>MyProfile</NavLink>
-      <NavLink className="btn btn-secondary" to="/login">
+      <NavLink className="btn btn-secondary font-bold" to="/login">
         Login
       </NavLink>
     </div>

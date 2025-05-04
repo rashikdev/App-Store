@@ -19,7 +19,7 @@ const Home = () => {
         <h2>Slider with 3 image</h2>
       </section>
       <div className="border-2 rounded border-gray-300 p-3 space-y-4">
-        <h2>Trending Apps</h2>
+        <h2 className="text-2xl font-semibold">Trending Apps</h2>
         <div className="grid md:grid-cols-4 gap-4">
           {trendingApp.map((app) => (
             <AppsContainer key={app.id} app={app}></AppsContainer>
@@ -27,7 +27,7 @@ const Home = () => {
         </div>
       </div>
       <div className="border-2 rounded border-gray-300 p-3 space-y-4">
-        <h2>Productivity Apps</h2>
+        <h2 className="text-2xl font-semibold">Productivity Apps</h2>
         <div className="grid md:grid-cols-4 gap-4">
           {productivityApp.map((app) => (
             <AppsContainer key={app.id} app={app}></AppsContainer>
@@ -35,7 +35,7 @@ const Home = () => {
         </div>
       </div>
       <div className="border-2 rounded border-gray-300 p-3 space-y-4">
-        <h2>Healthcare Apps</h2>
+        <h2 className="text-2xl font-semibold">Healthcare Apps</h2>
         <div className="grid md:grid-cols-4 gap-4">
           {healthcareApp.map((app) => (
             <AppsContainer key={app.id} app={app}></AppsContainer>
@@ -43,7 +43,7 @@ const Home = () => {
         </div>
       </div>
       <div className="border-2 rounded border-gray-300 p-3 space-y-4">
-        <h2>Education Apps</h2>
+        <h2 className="text-2xl font-semibold">Education Apps</h2>
         <div className="grid md:grid-cols-4 gap-4">
           {educationApp.map((app) => (
             <AppsContainer key={app.id} app={app}></AppsContainer>
