@@ -1,0 +1,250 @@
+[
+  {
+    "id": "app001",
+    "name": "Programming Hero",
+    "developer": "Programming Hero Ltd.",
+    "thumbnail": "https://i.ibb.co.com/Gf3pGwhg/Screenshot-2025-05-05-005036.png",
+    "banner": "https://i.ibb.co/vj5rT68/programming-hero-banner.jpg",
+    "downloads": 3500000,
+    "category": "Education",
+    "rating": 4.8,
+    "description": "Programming Hero is a fun and interactive way to learn programming. Whether you're a beginner or looking to brush up your skills, this app makes learning to code exciting and practical.",
+    "features": [
+      "Interactive coding lessons",
+      "Real-world projects",
+      "Gamified learning experience"
+    ],
+    "reviews": [
+      {
+        "user": "coder_nadia",
+        "rating": 5,
+        "comment": "Best app for beginners! The lessons are super easy to follow and engaging."
+      }
+    ],
+    "trending": true
+  },
+  {
+    "id": "app002",
+    "name": "Duolingo",
+    "developer": "Duolingo Inc.",
+    "thumbnail": "https://i.ibb.co.com/0HpNSZ4/Screenshot-2025-05-05-010547.png",
+    "banner": "https://i.ibb.co/1qR3vQQ/duolingo-banner.jpg",
+    "downloads": 100000000,
+    "category": "Education",
+    "rating": 4.7,
+    "description": "Learn languages in a fun and engaging way. Duolingo offers bite-sized lessons that feel more like a game than a classroom.",
+    "features": [
+      "Multiple languages",
+      "Gamified learning",
+      "Progress tracking"
+    ],
+    "reviews": [
+      {
+        "user": "language_lover",
+        "rating": 5,
+        "comment": "This app is fun and super helpful! I’m learning Spanish easily."
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "Khan Academy",
+    "developer": "Khan Academy",
+    "thumbnail": "https://i.ibb.co.com/DDGSjMCN/Screenshot-2025-05-05-010631.png",
+    "banner": "https://i.ibb.co/VmtJrW0/khan-banner.jpg",
+    "downloads": 10000000,
+    "category": "Education",
+    "rating": 4.9,
+    "description": "Khan Academy provides a world-class education for anyone, anywhere, for free.",
+    "features": ["Video lessons", "Practice exercises", "Progress reports"],
+    "reviews": [
+      {
+        "user": "mathgeek007",
+        "rating": 5,
+        "comment": "Amazing app for school and college students."
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "Coursera",
+    "developer": "Coursera Inc.",
+    "thumbnail": "https://i.ibb.co.com/VYL5BJjz/Screenshot-2025-05-05-010728.png",
+    "banner": "https://i.ibb.co/s6dQ9Rx/coursera-banner.jpg",
+    "downloads": 5000000,
+    "category": "Education",
+    "rating": 4.6,
+    "description": "Get access to online courses from top universities and companies. Learn job-relevant skills today.",
+    "features": [
+      "Courses from universities",
+      "Certificates",
+      "Offline learning"
+    ],
+    "reviews": [
+      {
+        "user": "career_booster",
+        "rating": 4,
+        "comment": "Very professional courses, great for building my resume."
+      }
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "Todoist",
+    "developer": "Doist",
+    "thumbnail": "https://i.ibb.co.com/SpWhgQp/Screenshot-2025-05-05-005427.png",
+    "banner": "https://i.ibb.co/g63rC4H/todoist-banner.jpg",
+    "downloads": 30000000,
+    "category": "Productivity",
+    "rating": 4.8,
+    "description": "Todoist helps you organize your life and get things done efficiently.",
+    "features": ["Task management", "Collaboration", "Daily reminders"],
+    "reviews": [
+      {
+        "user": "busybee",
+        "rating": 5,
+        "comment": "My go-to app for organizing daily tasks!"
+      }
+    ],
+    "trending": true
+  },
+  {
+    "id": "app006",
+    "name": "Notion",
+    "developer": "Notion Labs, Inc.",
+    "thumbnail": "https://i.ibb.co.com/k2cP1p2h/Screenshot-2025-05-05-010059.png",
+    "banner": "https://i.ibb.co/yq2yDRZ/notion-banner.jpg",
+    "downloads": 20000000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "description": "All-in-one workspace for notes, tasks, databases, and collaboration.",
+    "features": ["Customizable pages", "Team collaboration", "Templates"],
+    "reviews": [
+      {
+        "user": "organized_olivia",
+        "rating": 5,
+        "comment": "So versatile! I use it for work, journaling, and planning."
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "Google Keep",
+    "developer": "Google LLC",
+    "thumbnail": "https://i.ibb.co.com/zVDJnX7W/Screenshot-2025-05-05-010152.png",
+    "banner": "https://i.ibb.co/WfvG1pJ/keep-banner.jpg",
+    "downloads": 100000000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "description": "Quickly capture what’s on your mind and share those thoughts with friends and family.",
+    "features": ["Note taking", "Reminders", "Sync with Google"],
+    "reviews": [
+      {
+        "user": "quicknotes",
+        "rating": 4,
+        "comment": "Simple and effective note-taking app."
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "Trello",
+    "developer": "Atlassian",
+    "thumbnail": "https://i.ibb.co.com/9kLYwzGS/Screenshot-2025-05-05-010252.png",
+    "banner": "https://i.ibb.co/yV0N01M/trello-banner.jpg",
+    "downloads": 50000000,
+    "category": "Productivity",
+    "rating": 4.5,
+    "description": "Trello lets you work more collaboratively and get more done using boards, lists, and cards.",
+    "features": ["Visual task tracking", "Team collaboration", "Integrations"],
+    "reviews": [
+      {
+        "user": "project_junkie",
+        "rating": 4,
+        "comment": "Great for managing team projects and sprints."
+      }
+    ]
+  },
+  {
+    "id": "app009",
+    "name": "MyFitnessPal",
+    "developer": "Under Armour",
+    "thumbnail": "https://i.ibb.co.com/Xr7LDsw9/Screenshot-2025-05-05-005652.png",
+    "banner": "https://i.ibb.co/wRXksz3/fitnesspal-banner.jpg",
+    "downloads": 80000000,
+    "category": "Health",
+    "rating": 4.5,
+    "description": "Track your calories, exercise, and progress with MyFitnessPal.",
+    "features": ["Calorie counter", "Exercise diary", "Nutritional insights"],
+    "reviews": [
+      {
+        "user": "healthkick",
+        "rating": 5,
+        "comment": "Helped me lose 10kg! Super motivating."
+      }
+    ],
+    "trending": true
+  },
+  {
+    "id": "app010",
+    "name": "Headspace",
+    "developer": "Headspace Inc.",
+    "thumbnail": "https://i.ibb.co.com/ZR9g8C8z/Screenshot-2025-05-05-010406.png",
+    "banner": "https://i.ibb.co/JRHw9TC/headspace-banner.jpg",
+    "downloads": 6000000,
+    "category": "Health",
+    "rating": 4.7,
+    "description": "Meditation and mindfulness made simple. Live a healthier, happier life.",
+    "features": ["Guided meditation", "Sleep sounds", "Mindfulness exercises"],
+    "reviews": [
+      {
+        "user": "zen_mike",
+        "rating": 5,
+        "comment": "Changed my life. Great for anxiety relief."
+      }
+    ]
+  },
+  {
+    "id": "app011",
+    "name": "WaterMinder",
+    "developer": "Funn Media",
+    "thumbnail": "https://i.ibb.co.com/21QwFbyx/Screenshot-2025-05-05-010512.png",
+    "banner": "https://i.ibb.co/K9VZxDc/waterminder-banner.jpg",
+    "downloads": 2000000,
+    "category": "Health",
+    "rating": 4.6,
+    "description": "Stay healthy and hydrated by tracking your daily water intake.",
+    "features": ["Custom water goals", "Reminders", "Health app integration"],
+    "reviews": [
+      {
+        "user": "hydrate_hannah",
+        "rating": 4,
+        "comment": "Helps me drink more water every day!"
+      }
+    ]
+  },
+  {
+    "id": "app012",
+    "name": "7 Minute Workout",
+    "developer": "Simple Design Ltd.",
+    "thumbnail": "https://i.ibb.co.com/6c2gmcB0/Screenshot-2025-05-05-005909.png",
+    "banner": "https://i.ibb.co/gjMnQ4r/7min-banner.jpg",
+    "downloads": 10000000,
+    "category": "Health",
+    "rating": 4.8,
+    "description": "Quick and effective workouts for busy people. No equipment needed.",
+    "features": [
+      "Scientifically proven workout",
+      "Voice instructions",
+      "Daily reminders"
+    ],
+    "reviews": [
+      {
+        "user": "fit_in_7",
+        "rating": 5,
+        "comment": "Perfect for morning routines. Quick and sweaty!"
+      }
+    ],
+    "trending": true
+  }
+]
