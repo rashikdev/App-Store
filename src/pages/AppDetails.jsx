@@ -39,7 +39,7 @@ const AppDetails = () => {
       <img
         src={banner}
         alt={`${name} banner`}
-        className="w-full h-48 object-cover rounded-lg"
+        className="w-full h-[50vh] object-cover rounded-lg"
       />
 
       <div className="flex gap-4 items-center">
