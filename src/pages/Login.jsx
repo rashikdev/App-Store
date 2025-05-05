@@ -1,11 +1,13 @@
 import React, { use } from "react";
 import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
 import { toast } from "react-hot-toast";
 
 const Login = () => {
   const { signIn } = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -15,6 +17,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         toast.success("Login Successfully");
+        navigate(location.state || "/");
       })
       .catch((error) => {
         console.log(error.message);

@@ -15,7 +15,7 @@ const Navbar = () => {
       <div>
         <NavLink className="flex items-center" to="/">
           <img className="w-7 rounded-full" src={logo} alt="" />
-          <h2 className="font-bold text-2xl ml-2">App Store</h2>
+          <h2 className="font-bold text-2xl hidden md:block ml-2 ">App Store</h2>
         </NavLink>
       </div>
       <NavLink>
