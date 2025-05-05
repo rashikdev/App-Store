@@ -1,13 +1,30 @@
-import React from "react";
+import React, { use } from "react";
 import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router";
+import { AuthContext } from "../context/AuthProvider";
 
 const Login = () => {
+  const { signIn } = use(AuthContext);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+    // console.log(email, password);
+  };
   return (
     <div className="my-20">
       <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl bg-black text-white">
         <h1 className="text-2xl font-bold text-center">Login Your Account</h1>
-        <form className="space-y-6">
+        <form onSubmit={handleLogin} className="space-y-6">
           <div className="space-y-1 text-sm">
             <label htmlFor="username" className="block">
               Email

@@ -1,13 +1,33 @@
-import React from "react";
+import React, { use } from "react";
 import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import { AuthContext } from "../context/AuthProvider";
 
 const Register = () => {
+  const { createUser } = use(AuthContext);
+  const navigate = useNavigate();
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    const name = form.name.value;
+    const photo_url = form.photo_url.value;
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   return (
     <div className="my-20">
       <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl bg-black text-white">
         <h1 className="text-2xl font-bold text-center">Register</h1>
-        <form className="space-y-6">
+        <form onSubmit={handleRegister} className="space-y-6">
           <div className="space-y-1 text-sm">
             <label htmlFor="username" className="block">
               Name
