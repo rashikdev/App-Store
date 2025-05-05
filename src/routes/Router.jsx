@@ -5,6 +5,7 @@ import Home from "../components/navbar/home/Home";
 import Register from "../pages/Register";
 import AppDetails from "../pages/AppDetails";
 import ErrorPage from "../pages/ErrorPage";
+import LoadingPage from "../components/LoadingPage";
 
 export const Router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ export const Router = createBrowserRouter([
         index: true,
         Component: Home,
         loader: () => fetch("/data.json"),
-        hydrateFallbackElement: <h1>Loading...</h1>,
+        hydrateFallbackElement: <LoadingPage></LoadingPage>,
       },
       {
         path: "/login",
@@ -29,7 +30,7 @@ export const Router = createBrowserRouter([
         path: "/app/:id",
         Component: AppDetails,
         loader: () => fetch("/data.json"),
-        hydrateFallbackElement: <h1>Loading...</h1>,
+        hydrateFallbackElement: <LoadingPage></LoadingPage>,
       },
     ],
   },

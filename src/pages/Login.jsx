@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
   const { signIn } = use(AuthContext);
@@ -13,7 +14,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        toast.success("Login Successfully");
       })
       .catch((error) => {
         console.log(error.message);

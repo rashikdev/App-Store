@@ -2,9 +2,10 @@ import React, { use } from "react";
 import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
-  const { createUser } = use(AuthContext);
+  const { createUser, updateUser, setUser, user } = use(AuthContext);
   const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
@@ -15,9 +16,18 @@ const Register = () => {
     const photo_url = form.photo_url.value;
     createUser(email, password)
       .then((result) => {
-        const user = result.user;
-        console.log(user);
-        navigate("/");
+        updateUser({
+          displayName: name,
+          photoURL: photo_url,
+        })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo_url });
+            toast.success("Register Successfully");
+            navigate("/");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       })
       .catch((error) => {
         console.log(error.message);
