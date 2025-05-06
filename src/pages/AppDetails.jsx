@@ -12,10 +12,15 @@ const AppDetails = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const [ratingValue, setRatingValue] = useState(0);
+
+  const [click, setClick] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmittedComment(comment);
     setComment("");
+    setClick(false);
     toast.success("Comment submitted successfully");
     setIsSubmitted(true);
   };
@@ -105,7 +110,10 @@ const AppDetails = () => {
           </div>
           {isSubmitted && (
             <div className="w-[80%] md:w-auto py-5">
-              <ReviewCard submittedComment={submittedComment}></ReviewCard>
+              <ReviewCard
+                submittedComment={submittedComment}
+                ratingValue={ratingValue}
+              ></ReviewCard>
             </div>
           )}
         </div>
@@ -122,9 +130,31 @@ const AppDetails = () => {
         <fieldset className="flex flex-col md:flex-row justify-between items-center space-y-3 rounded md:px-10">
           <legend className="font-bold text-2xl px-2">User reviews</legend>
           <div className="p-3">
-            <h3 className="font-semibold pb-5">
-              Your Rating <span className="cursor-pointer">⭐⭐⭐⭐⭐</span>
-            </h3>
+            <div className="font-semibold pb-5">
+              <h2>Your Rating</h2>
+              {/* rating stars */}
+
+              <div className="flex space-x-1 my-2">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <span
+                    key={star}
+                    className={`text-2xl cursor-pointer ${
+                      click && star <= ratingValue
+                        ? "text-yellow-500"
+                        : "text-gray-400"
+                    }`}
+                    onClick={() => {
+                      setRatingValue(star);
+                      setClick(true);
+                    }}
+                  >
+                    ★
+                  </span>
+                ))}
+              </div>
+
+              {/* rating stars end */}
+            </div>
             <form onSubmit={handleSubmit}>
               <textarea
                 value={comment}

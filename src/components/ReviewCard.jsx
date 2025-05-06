@@ -2,7 +2,7 @@ import React, { use } from "react"; // Optional: for star icon, or use emoji/sta
 import { FaStar } from "react-icons/fa";
 import { AuthContext } from "../context/AuthProvider";
 import userLogo from "../assets/user.png";
-const ReviewCard = ({ submittedComment }) => {
+const ReviewCard = ({ submittedComment, ratingValue }) => {
   const { user } = use(AuthContext);
   const { displayName, photoURL } = user;
   return (
@@ -21,7 +21,7 @@ const ReviewCard = ({ submittedComment }) => {
         </div>
         <div className="flex items-center gap-1 text-yellow-500 font-semibold">
           <FaStar className="w-4 h-4 fill-yellow-400" />
-          <span>4.5</span>
+          <span>{ratingValue}</span>
         </div>
       </div>
 

@@ -3,7 +3,6 @@ import { Link } from "react-router";
 
 const AppsContainer = ({ app }) => {
   const { name, thumbnail, rating, downloads, id } = app;
-  // console.log(app)
   return (
     <Link to={`/app/${id}`}>
       <div className="rounded-md flex gap-5 p-4 shadow-2xl border-1 border-gray-200 hover:bg-gray-100 hover:scale-105 transition-all duration-300">
