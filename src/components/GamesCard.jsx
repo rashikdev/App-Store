@@ -3,7 +3,7 @@ import React from "react";
 const GamesCard = ({ game }) => {
   const { name, thumbnail, image, rating, category } = game;
   return (
-    <div className="max-w-md rounded-lg shadow-lg overflow-hidden bg-white">
+    <div className="rounded-lg shadow-xl overflow-hidden bg-white cursor-pointer hover:scale-102 transition-all duration-400">
       <div className="w-full h-48 overflow-hidden">
         <img src={image} alt={name} className="w-full h-full object-center" />
       </div>

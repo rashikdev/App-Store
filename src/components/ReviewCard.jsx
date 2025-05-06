@@ -26,7 +26,7 @@ const ReviewCard = ({ submittedComment, ratingValue }) => {
       </div>
 
       <div className="mt-3 space-y-2 text-sm text-gray-700 leading-relaxed">
-        <p className="pl-2">{submittedComment}</p>
+        <p className="pl-2 font-semibold">{submittedComment}</p>
       </div>
     </div>
   );

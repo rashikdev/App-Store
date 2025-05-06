@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className="bg-base-300 py-4 z-50 px-2 flex justify-between items-center shadow-md font-bold sticky top-0">
       <div>
         <NavLink className="flex items-center" to="/">
-          <img className="w-7 rounded-full" src={logo} alt="" />
+          <img className="md:w-10 w-8 rounded-full" src={logo} alt="" />
           <h2 className="font-bold text-2xl hidden md:block ml-2 ">
             App Store
           </h2>
@@ -25,7 +25,7 @@ const Navbar = () => {
         className={({ isActive }) =>
           isActive
             ? "bg-gradient-to-r from-orange-500 to-pink-600 px-3 py-1 md:px-6 md:py-2 text-white rounded-2xl"
-            : ""
+            : "md:bg-pink-200 px-3 py-1 md:px-6 md:py-2 text-black rounded-2xl"
         }
       >
         <h2 className="">Apps</h2>
@@ -35,16 +35,16 @@ const Navbar = () => {
         className={({ isActive }) =>
           isActive
             ? "bg-gradient-to-r from-orange-500 to-pink-600 px-3 py-1 md:px-6 md:py-2 text-white rounded-2xl"
-            : ""
+            : "md:bg-pink-200 px-3 py-1 md:px-6 md:py-2 text-black rounded-2xl"
         }
       >
         <h2 className="">Games</h2>
       </NavLink>
       <NavLink to="/profile">MyProfile</NavLink>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 md:gap-4">
         <img
           title={user?.email}
-          className="w-10 cursor-pointer rounded-full border-2 border-gray-300"
+          className="md:w-10 w-8 cursor-pointer rounded-full border-2 border-gray-300"
           src={`${
             user ? (user.photoURL ? user.photoURL : userLogo) : userLogo
           }`}
@@ -53,7 +53,7 @@ const Navbar = () => {
         {user ? (
           <button
             onClick={handleLogout}
-            className="md:px-3 py-1 md:py-2 px-2 bg-red-700 text-white font-bold rounded-full"
+            className="md:px-3 py-1 md:py-2 px-2 bg-red-600 text-white font-bold rounded-full text-[14px] md:text-[16px]"
           >
             Logout
           </button>
