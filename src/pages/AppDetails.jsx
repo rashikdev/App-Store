@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import ReviewCard from "../components/ReviewCard";
 import toast from "react-hot-toast";
-
+import userLogo from "../assets/user.png";
+import { FaStar } from "react-icons/fa";
 const AppDetails = () => {
   const [installed, setInstalled] = useState(false);
   const [checked, setChecked] = useState(false);
@@ -66,7 +67,7 @@ const AppDetails = () => {
       {/* Description */}
       <div>
         <h3 className="font-semibold text-lg">Description</h3>
-        <p className="text-gray-800">{description}</p>
+        <p>{description}</p>
       </div>
 
       {/* Features */}
@@ -80,63 +81,83 @@ const AppDetails = () => {
       </div>
 
       {/* Reviews */}
-      <div>
-        <h3 className="font-semibold text-lg">Reviews</h3>
-        <div className="space-y-2">
-          {reviews.map((review, idx) => (
-            <div key={idx} className="border p-3 rounded bg-gray-50">
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold">{review.user}</span>: ⭐{" "}
-                {review.rating}
-              </p>
-              <p className="text-gray-700">{review.comment}</p>
+      <div className="min-h-[200px]">
+        <h3 className="font-semibold text-lg mb-4">Reviews</h3>
+        <div className="flex md:flex-row flex-col items-center gap-5">
+          <div className="md:w-[400px] w-full md:h-[150px] bg-white p-3 md:p-5 rounded-xl shadow-xl shadow-orange-200  border-2 border-orange-200">
+            <div className="flex  justify-between items-start">
+              <div className="flex items-center gap-3">
+                <img className="w-10 rounded-full" src={userLogo} alt="" />
+                <div>
+                  <h4 className="font-semibold text-gray-900"> Rashik</h4>
+                  <p className="text-sm text-gray-500">2 days ago</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-1 text-yellow-500 font-semibold">
+                <FaStar className="w-4 h-4 fill-yellow-400" />
+                <span>4.5</span>
+              </div>
             </div>
-          ))}
+
+            <div className="mt-3 space-y-2 text-sm text-gray-700 leading-relaxed">
+              <p className="font-semibold pl-2">Very good app 😍</p>
+            </div>
+          </div>
+          {isSubmitted && (
+            <div className="w-[80%] md:w-auto py-5">
+              <ReviewCard submittedComment={submittedComment}></ReviewCard>
+            </div>
+          )}
         </div>
       </div>
 
       {/* Install Button */}
       <button
         onClick={() => setInstalled((prv) => !prv)}
-        className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-100 cursor-pointer w-full md:w-auto"
+        className="bg-primary text-white font-semibold md:text-xl px-4 py-2 md:py-4 rounded-full hover:bg-blue-700 transition duration-100 cursor-pointer w-full md:my-10"
       >
         {installed ? "Uninstall" : "Install"}
       </button>
       <section className="">
-        <fieldset className="flex flex-col md:flex-row justify-between items-center border-2 space-y-2 border-secondary rounded  md:px-10">
+        <fieldset className="flex flex-col md:flex-row justify-between items-center space-y-3 rounded md:px-10">
           <legend className="font-bold text-2xl px-2">User reviews</legend>
           <div className="p-3">
-            <h3>Your Rating</h3>
+            <h3 className="font-semibold pb-5">
+              Your Rating <span className="cursor-pointer">⭐⭐⭐⭐⭐</span>
+            </h3>
             <form onSubmit={handleSubmit}>
               <textarea
                 value={comment}
                 name="comment"
                 rows="6"
                 cols="40"
+                placeholder="Write your review here"
                 onChange={(e) => setComment(e.target.value)}
-                className="border-2 rounded-md border-gray-400 outline-secondary p-2"
+                className="border-2 rounded-md border-gray-200 outline-secondary p-2"
               ></textarea>
               <br />
-              <div>
+              <br />
+              <div className="flex items-center justify-center">
                 <input
                   onClick={() => setChecked((prv) => !prv)}
                   type="checkbox"
-                  className="checkbox checkbox-secondary border-[1.5px]"
+                  className="checkbox checkbox-secondary border-[1.5px] self-start md:mt-0 mt-2"
                 />
-                <label className="ml-2">
-                  we care about protecting your data. Here's our
-                  <span className="font-bold hover:underline cursor-pointer">
-                    {" "}
-                    Privacy Policy
-                  </span>
+                <label className="ml-2 text-green-600 font-medium self-start">
+                  <p>
+                    we care about protecting your data. Here's our{" "}
+                    <span className="underline text-primary font-bold cursor-pointer">
+                      Privacy Policy
+                    </span>
+                  </p>
                 </label>
               </div>
               <br />
               <button
                 type="submit"
-                className={`px-4 py-2 rounded transition duration-100 w-full md:w-auto ${
+                className={`px-4 py-2 md:px-10 md:py-3 rounded-full transition duration-100 w-full md:w-auto ${
                   installed && checked
-                    ? "bg-primary hover:bg-blue-700 text-white cursor-pointer"
+                    ? "bg-primary hover:scale-95 transition-all duration-200 hover:shadow-2xl hover:bg-blue-700 text-white cursor-pointer"
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
                 }`}
                 disabled={!installed}
@@ -145,11 +166,6 @@ const AppDetails = () => {
               </button>
             </form>
           </div>
-          {isSubmitted && (
-            <div className="w-[80%] md:w-auto py-5">
-              <ReviewCard submittedComment={submittedComment}></ReviewCard>
-            </div>
-          )}
         </fieldset>
       </section>
     </div>
