@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "Magic Tower Defense",
+    "thumbnail": "https://i.ibb.co.com/JwKcnZwj/Screenshot-2025-05-06-191238.png",
+    "image": "https://i.ibb.co.com/JwKcnZwj/Screenshot-2025-05-06-191238.png",
+    "rating": 4.4,
+    "category": "Tower Defense"
+  },
+  {
+    "id": "2",
+    "name": "Battle Royale Arena",
+    "thumbnail": "https://i.ibb.co.com/76TWBNT/Screenshot-2025-05-06-184839.png",
+    "image": "https://i.ibb.co.com/4Z5xkJjy/2151220598.jpg",
+    "rating": 4.8,
+    "category": "Shooter"
+  },
+  {
+    "id": "3",
+    "name": "Speed Racer X",
+    "thumbnail": "https://i.ibb.co.com/WLXMvHX/Screenshot-2025-05-06-184459.png",
+    "image": "https://i.ibb.co.com/gFVndYRF/2150799971.jpg",
+    "rating": 4.7,
+    "category": "Racing"
+  },
+  {
+    "id": "4",
+    "name": "Candy Puzzle",
+    "thumbnail": "https://i.ibb.co.com/gLshjtNy/Screenshot-2025-05-06-184033.png",
+    "image": "https://i.ibb.co.com/Gf8gPTZs/2301-w032-n002-480-B-p15-480.jpg",
+    "rating": 4.2,
+    "category": "Puzzle"
+  },
+  {
+    "id": "5",
+    "name": "Mystic Quest",
+    "thumbnail": "https://i.ibb.co.com/yFXjNB8K/Screenshot-2025-05-06-185627.png",
+    "image": "https://i.ibb.co.com/ZRXZqMqb/2151451000.jpg",
+    "rating": 4.1,
+    "category": "Adventure"
+  },
+  {
+    "id": "6",
+    "name": "Football Stars",
+    "thumbnail": "https://i.ibb.co.com/gbsmNgjJ/Screenshot-2025-05-06-185915.png",
+    "image": "https://i.ibb.co.com/Vc2gwYnr/1090739-5445.jpg",
+    "rating": 4.6,
+    "category": "Sports"
+  },
+  {
+    "id": "7",
+    "name": "Zombie Defense",
+    "thumbnail": "https://i.ibb.co.com/60DMd4YY/Screenshot-2025-05-06-190248.png",
+    "image": "https://i.ibb.co.com/FbdNr8n4/2150838730.jpg",
+    "rating": 4.3,
+    "category": "Strategy"
+  },
+  {
+    "id": "8",
+    "name": "Farm Builder",
+    "thumbnail": "https://i.ibb.co.com/jvPPZP8T/Screenshot-2025-05-06-190601.png",
+    "image": "https://i.ibb.co.com/rRsmXgHQ/Screenshot-2025-05-06-190435.png",
+    "rating": 4.0,
+    "category": "Simulation"
+  },
+  {
+    "id": "9",
+    "name": "Shadow Legends",
+    "thumbnail": "https://i.ibb.co.com/7NXRmtXC/2151140048.jpg",
+    "image": "https://i.ibb.co.com/7NXRmtXC/2151140048.jpg",
+    "rating": 4.5,
+    "category": "Action"
+  }
+]

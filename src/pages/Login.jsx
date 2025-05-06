@@ -25,7 +25,7 @@ const Login = () => {
     // console.log(email, password);
   };
   return (
-    <div className="my-20">
+    <div className="md:my-20 mt-14 px-3 md:px-0">
       <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl bg-black text-white">
         <h1 className="text-2xl font-bold text-center">Login Your Account</h1>
         <form onSubmit={handleLogin} className="space-y-6">

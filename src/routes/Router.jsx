@@ -7,6 +7,7 @@ import AppDetails from "../pages/AppDetails";
 import ErrorPage from "../pages/ErrorPage";
 import LoadingPage from "../components/LoadingPage";
 import PrivateRoute from "../components/PrivateRoute";
+import Games from "../pages/Games";
 
 export const Router = createBrowserRouter([
   {
@@ -26,6 +27,12 @@ export const Router = createBrowserRouter([
       {
         path: "/register",
         Component: Register,
+      },
+      {
+        path: "/games",
+        element: <Games></Games>,
+        loader: () => fetch("/gamesData.json"),
+        hydrateFallbackElement: <LoadingPage></LoadingPage>,
       },
       {
         path: "/app/:id",

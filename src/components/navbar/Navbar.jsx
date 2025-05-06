@@ -20,8 +20,25 @@ const Navbar = () => {
           </h2>
         </NavLink>
       </div>
-      <NavLink>
-        <h2 className=" md:px-6 md:py-2 px-2 bg-accent rounded-xl">Apps</h2>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-gradient-to-r from-orange-500 to-pink-600 px-3 py-1 md:px-6 md:py-2 text-white rounded-2xl"
+            : ""
+        }
+      >
+        <h2 className="">Apps</h2>
+      </NavLink>
+      <NavLink
+        to="/games"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-gradient-to-r from-orange-500 to-pink-600 px-3 py-1 md:px-6 md:py-2 text-white rounded-2xl"
+            : ""
+        }
+      >
+        <h2 className="">Games</h2>
       </NavLink>
       <NavLink to="/profile">MyProfile</NavLink>
       <div className="flex items-center gap-4">
@@ -36,12 +53,15 @@ const Navbar = () => {
         {user ? (
           <button
             onClick={handleLogout}
-            className="btn btn-secondary font-bold"
+            className="md:px-3 py-1 md:py-2 px-2 bg-red-700 text-white font-bold rounded-full"
           >
             Logout
           </button>
         ) : (
-          <NavLink className="btn btn-secondary font-bold" to="/login">
+          <NavLink
+            className="btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold rounded-full"
+            to="/login"
+          >
             Login
           </NavLink>
         )}
