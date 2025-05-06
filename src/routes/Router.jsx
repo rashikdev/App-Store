@@ -8,6 +8,7 @@ import ErrorPage from "../pages/ErrorPage";
 import LoadingPage from "../components/LoadingPage";
 import PrivateRoute from "../components/PrivateRoute";
 import Games from "../pages/Games";
+import Profile from "../pages/Profile";
 
 export const Router = createBrowserRouter([
   {
@@ -27,6 +28,14 @@ export const Router = createBrowserRouter([
       {
         path: "/register",
         Component: Register,
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/games",

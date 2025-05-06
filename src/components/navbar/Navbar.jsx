@@ -91,7 +91,13 @@ const Navbar = () => {
       >
         <h2 className="">Games</h2>
       </NavLink>
-      <NavLink className="hidden md:block" to="/profile">
+      <NavLink className={({ isActive }) =>
+          `${
+            isActive
+              ? "bg-gradient-to-r from-orange-500 to-pink-600 text-white"
+              : "md:bg-pink-200 text-black"
+          } px-3 py-1 md:px-6 md:py-2 rounded-2xl hidden md:block`
+        } to="/profile">
         MyProfile
       </NavLink>
       {/* nav items  end*/}
@@ -108,7 +114,7 @@ const Navbar = () => {
         {user ? (
           <button
             onClick={handleLogout}
-            className="md:px-3 py-1 md:py-2 px-2 bg-red-600 text-white font-bold rounded-full text-[14px] md:text-[16px]"
+            className="md:px-3 py-1 md:py-2 px-2 bg-[crimson] text-white font-bold rounded-full text-[14px] md:text-[16px]"
           >
             Logout
           </button>
