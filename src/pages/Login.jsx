@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
 import { toast } from "react-hot-toast";
@@ -10,6 +10,9 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+
+  const emailRef = useRef();
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -27,7 +30,8 @@ const Login = () => {
       });
   };
   const handleResetPassword = () => {
-    resetPassword()
+    const email = emailRef.current.value;
+    resetPassword(email)
       .then(() => {
         toast.success("Password reset email sent");
       })
@@ -47,6 +51,7 @@ const Login = () => {
             <input
               type="email"
               name="email"
+              ref={emailRef}
               placeholder="Email"
               className="w-full px-4 py-3 rounded-md border"
             />
