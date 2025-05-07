@@ -58,6 +58,8 @@ const Profile = () => {
           <button
             onClick={() => {
               setEdit(true);
+              setName("");
+              setPhoto("");
             }}
             className="btn btn-accent text-white md:rounded-2xl rounded-xl md:px-6"
           >
@@ -77,28 +79,26 @@ const Profile = () => {
           <div className="px-4 md:px-16">
             <form onSubmit={handleUpdate} className="space-y-6">
               <div className="space-y-1 text-sm">
-                <label className="block">
-                  Name
-                </label>
+                <label className="block">Name</label>
                 <input
                   type="text"
                   name="name"
                   autoComplete="name"
                   value={name}
+                  required
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name"
                   className="md:w-6/8 w-full px-4 py-3 rounded-md border-2 border-secondary outline-none"
                 />
               </div>
               <div className="space-y-1 text-sm">
-                <label className="block">
-                  Photo URL
-                </label>
+                <label className="block">Photo URL</label>
                 <input
                   type="text"
                   name="photo_url"
                   autoComplete="photo_url"
                   value={photo}
+                  required
                   onChange={(e) => setPhoto(e.target.value)}
                   placeholder="Paste your Photo URL"
                   className="md:w-6/8 w-full px-4 py-3 rounded-md border-2 border-secondary outline-none"
