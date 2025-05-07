@@ -6,7 +6,7 @@ import MoreSignIn from "../components/MoreSignIn";
 import { TbEye, TbEyeClosed } from "react-icons/tb";
 
 const Login = () => {
-  const { signIn } = use(AuthContext);
+  const { signIn, resetPassword } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
@@ -20,6 +20,16 @@ const Login = () => {
         const user = result.user;
         toast.success("Login Successfully");
         navigate(location.state || "/");
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        toast.error("Invalid email or password");
+      });
+  };
+  const handleResetPassword = () => {
+    resetPassword()
+      .then(() => {
+        toast.success("Password reset email sent");
       })
       .catch((error) => {
         console.log(error.message);
@@ -47,7 +57,7 @@ const Login = () => {
             </label>
             <div className="relative">
               <input
-                type={`${show ? "text" : "password"}`}
+                type={show ? "text" : "password"}
                 name="password"
                 id="password"
                 required
@@ -55,14 +65,19 @@ const Login = () => {
                 className="w-full px-4 py-3 rounded-md border"
               />
               <button
+                type="button"
                 onClick={() => setShow(!show)}
                 className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer"
               >
                 {show ? <TbEyeClosed size={23} /> : <TbEye size={23} />}
               </button>
             </div>
-            <div className="flex justify-end text-xs">
-              <a rel="noopener noreferrer" href="#">
+            <div className="flex justify-end mt-3 hover:underline text-red-500 underline-offset-4 transition-all duration-400">
+              <a
+                onClick={handleResetPassword}
+                rel="noopener noreferrer"
+                href="#"
+              >
                 Forgot Password?
               </a>
             </div>

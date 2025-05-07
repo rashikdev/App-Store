@@ -26,7 +26,7 @@ const Register = () => {
     } else if (!/[A-Z]/.test(password)) {
       toast.error("Password must contain at least one uppercase letter");
       return;
-    } else if (!/[a - z]/.test(password)) {
+    } else if (!/[a-z]/.test(password)) {
       toast.error("Password must contain at least one lowercase letter");
       return;
     }
@@ -96,15 +96,19 @@ const Register = () => {
             </label>
             <div className="relative">
               <input
-                type={`${show ? "text" : "password"}`}
+                type={show ? "text" : "password"}
                 name="password"
                 id="password"
                 required
                 placeholder="Password"
                 className="w-full px-4 py-3 rounded-md border"
               />
-              <button onClick={() => setShow(!show)} className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer">
-                {show ? <TbEyeClosed size={23}/> : <TbEye size={23}/>}
+              <button
+                type="button"
+                onClick={() => setShow(!show)}
+                className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer"
+              >
+                {show ? <TbEyeClosed size={23} /> : <TbEye size={23} />}
               </button>
             </div>
           </div>
