@@ -176,6 +176,7 @@ const AppDetails = () => {
               <div className="flex items-center justify-center">
                 <input
                   onClick={() => setChecked((prv) => !prv)}
+                  autoComplete="off"
                   type="checkbox"
                   className="checkbox checkbox-secondary border-[1.5px] self-start md:mt-0 mt-2"
                 />

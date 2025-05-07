@@ -14,7 +14,6 @@ const Profile = () => {
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
 
-  // Update state if user data changes
   useEffect(() => {
     if (user) {
       setName(user.displayName || "");
@@ -27,8 +26,6 @@ const Profile = () => {
     try {
       await updateUser({ displayName: name, photoURL: photo });
       setEdit(false);
-      setName("");
-      setPhoto("");
       toast.success("Profile updated successfully");
     } catch (error) {
       toast.error("Update failed", error);
@@ -59,7 +56,9 @@ const Profile = () => {
             </div>
           </div>
           <button
-            onClick={() => setEdit(true)}
+            onClick={() => {
+              setEdit(true);
+            }}
             className="btn btn-accent text-white md:rounded-2xl rounded-xl md:px-6"
           >
             Edit
@@ -78,12 +77,13 @@ const Profile = () => {
           <div className="px-4 md:px-16">
             <form onSubmit={handleUpdate} className="space-y-6">
               <div className="space-y-1 text-sm">
-                <label htmlFor="username" className="block">
+                <label className="block">
                   Name
                 </label>
                 <input
                   type="text"
                   name="name"
+                  autoComplete="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name"
@@ -91,12 +91,13 @@ const Profile = () => {
                 />
               </div>
               <div className="space-y-1 text-sm">
-                <label htmlFor="photo_url" className="block">
+                <label className="block">
                   Photo URL
                 </label>
                 <input
                   type="text"
                   name="photo_url"
+                  autoComplete="photo_url"
                   value={photo}
                   onChange={(e) => setPhoto(e.target.value)}
                   placeholder="Paste your Photo URL"

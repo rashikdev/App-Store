@@ -56,48 +56,44 @@ const Register = () => {
         <h1 className="text-2xl font-bold text-center">Register</h1>
         <form onSubmit={handleRegister} className="space-y-6">
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block">
-              Name
-            </label>
+            <label className="block">Name</label>
             <input
               type="text"
               name="name"
+              autoComplete="name"
               required
               placeholder="Name"
               className="w-full px-4 py-3 rounded-md border"
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block">
-              Photo URL
-            </label>
+            <label className="block">Photo URL</label>
             <input
               type="text"
               name="photo_url"
+              autoComplete="photo_url"
               placeholder="Photo URL"
               className="w-full px-4 py-3 rounded-md border"
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block">
-              Email
-            </label>
+            <label className="block">Email</label>
             <input
               type="email"
               name="email"
+              autoComplete="email"
               required
               placeholder="Email"
               className="w-full px-4 py-3 rounded-md border"
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label htmlFor="password" className="block">
-              Password
-            </label>
+            <label className="block">Password</label>
             <div className="relative">
               <input
                 type={show ? "text" : "password"}
                 name="password"
+                autoComplete="password"
                 id="password"
                 required
                 placeholder="Password"

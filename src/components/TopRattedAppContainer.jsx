@@ -4,7 +4,10 @@ import { Link } from "react-router";
 const TopRattedAppContainer = ({ app }) => {
   const { thumbnail, name, rating, id } = app;
   return (
-    <Link onClick={() => window.scrollTo(0, 0)} to={`/app/${id}`}>
+    <Link
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      to={`/app/${id}`}
+    >
       <section className="mt-8 max-w-[200px]">
         <div className="rounded-lg shadow-md p-4 flex flex-col gap-2 justify-center items-center hover:shadow-2xl transition-all duration-300 cursor-pointer">
           <img

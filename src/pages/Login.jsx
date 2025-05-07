@@ -45,25 +45,27 @@ const Login = () => {
         <h1 className="text-2xl font-bold text-center">Login Your Account</h1>
         <form onSubmit={handleLogin} className="space-y-6">
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block">
+            <label className="block">
               Email
             </label>
             <input
               type="email"
               name="email"
+              autoComplete="email"
               ref={emailRef}
               placeholder="Email"
               className="w-full px-4 py-3 rounded-md border"
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label htmlFor="password" className="block">
+            <label className="block">
               Password
             </label>
             <div className="relative">
               <input
                 type={show ? "text" : "password"}
                 name="password"
+                autoComplete="current-password"
                 id="password"
                 required
                 placeholder="Password"
