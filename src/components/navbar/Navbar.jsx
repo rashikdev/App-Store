@@ -11,7 +11,7 @@ const Navbar = () => {
     logOut();
   };
   return (
-    <div className="bg-base-300 py-4 z-50 px-2 flex justify-between items-center shadow-md font-bold sticky top-0">
+    <div className="bg-base-300 py-4 z-50 px-5 flex justify-between items-center shadow-md font-bold sticky top-0">
       {/* nav items  */}
       <div className="flex items-center gap-1">
         <div className="dropdown md:hidden block">

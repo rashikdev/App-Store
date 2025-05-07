@@ -1,13 +1,16 @@
-import React, { use } from "react";
-import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
+import React, { use, useState } from "react";
+import { FaEye, FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
 import toast from "react-hot-toast";
 import MoreSignIn from "../components/MoreSignIn";
+import { TbEye, TbEyeClosed } from "react-icons/tb";
 
 const Register = () => {
   const { createUser, updateUser, setUser, user } = use(AuthContext);
   const navigate = useNavigate();
+
+  const [show, setShow] = useState(false);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -91,14 +94,19 @@ const Register = () => {
             <label htmlFor="password" className="block">
               Password
             </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              required
-              placeholder="Password"
-              className="w-full px-4 py-3 rounded-md border"
-            />
+            <div className="relative">
+              <input
+                type={`${show ? "text" : "password"}`}
+                name="password"
+                id="password"
+                required
+                placeholder="Password"
+                className="w-full px-4 py-3 rounded-md border"
+              />
+              <button onClick={() => setShow(!show)} className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer">
+                {show ? <TbEyeClosed size={23}/> : <TbEye size={23}/>}
+              </button>
+            </div>
           </div>
           <button
             type="submit"
@@ -109,17 +117,17 @@ const Register = () => {
         </form>
         <MoreSignIn title={"Continue with Google"}></MoreSignIn>
         <p className="text-xs md:text-[16px] text-center sm:px-6">
-        Already have an account?
-        <Link
-          onClick={() => window.scrollTo(0, 0)}
-          to="/login"
-          rel="noopener noreferrer"
-          href="#"
-          className=" ml-2 underline text-secondary"
-        >
-          Login
-        </Link>
-      </p>
+          Already have an account?
+          <Link
+            onClick={() => window.scrollTo(0, 0)}
+            to="/login"
+            rel="noopener noreferrer"
+            href="#"
+            className=" ml-2 underline text-secondary"
+          >
+            Login
+          </Link>
+        </p>
       </div>
     </div>
   );

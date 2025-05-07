@@ -16,9 +16,11 @@ const Profile = () => {
 
   // Update state if user data changes
   useEffect(() => {
-    setName(displayName || "");
-    setPhoto(photoURL || "");
-  }, [displayName, photoURL]);
+    if (user) {
+      setName(user.displayName || "");
+      setPhoto(user.photoURL || "");
+    }
+  }, [user]);
 
   const handleUpdate = async (e) => {
     e.preventDefault();
