@@ -10,7 +10,7 @@ const PrivateRoute = ({ children }) => {
     return <LoadingPage></LoadingPage>;
   }
   if (!user) {
-    return <Navigate to="/register" state={location.pathname}></Navigate>;
+    return <Navigate to="/login" state={location.pathname}></Navigate>;
   }
   return children;
 };

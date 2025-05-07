@@ -16,6 +16,8 @@ const AppDetails = () => {
 
   const [click, setClick] = useState(false);
 
+  const [review, setReview] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmittedComment(comment);
@@ -123,6 +125,7 @@ const AppDetails = () => {
       <button
         onClick={() => {
           setInstalled((prv) => !prv);
+          setReview(true);
           toast.success(installed ? "App Uninstalled" : "App Installed");
         }}
         className="bg-primary text-white font-semibold md:text-xl px-4 py-2 md:py-4 rounded-full hover:bg-blue-700 transition duration-100 cursor-pointer w-full md:my-10"
@@ -189,11 +192,11 @@ const AppDetails = () => {
               <button
                 type="submit"
                 className={`px-4 py-2 md:px-10 md:py-3 rounded-full transition duration-100 w-full md:w-auto ${
-                  installed && checked
+                  review && checked
                     ? "bg-primary hover:scale-95 transition-all duration-200 hover:shadow-2xl hover:bg-blue-700 text-white cursor-pointer"
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
                 }`}
-                disabled={!installed}
+                disabled={!(review && checked)}
               >
                 {isSubmitted ? "Edit Review" : "Submit"}
               </button>

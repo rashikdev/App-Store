@@ -40,17 +40,29 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-medium mb-2">Connect with Us</h3>
           <div className="flex space-x-4 text-xl">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
-              <FaFacebookF className="hover:text-blue-500" />
+            <a
+              href="https://www.facebook.com/share/16Fjh4kbAR/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebookF size={23} className="hover:text-blue-500" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer">
-              <FaTwitter className="hover:text-sky-400" />
+            <a
+              href="https://x.com/RashikKhan513"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaTwitter size={23}className="hover:text-sky-400" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              <FaLinkedinIn className="hover:text-blue-600" />
+              <FaLinkedinIn size={23}className="hover:text-blue-600" />
             </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer">
-              <FaGithub className="hover:text-gray-300" />
+            <a
+              href="https://github.com/rashik218"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub size={23}className="hover:text-gray-300" />
             </a>
           </div>
         </div>

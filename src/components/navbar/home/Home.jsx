@@ -34,7 +34,7 @@ const Home = () => {
             <FaFire color="red"></FaFire>
           </span>
         </h2>
-        <div className="grid md:grid-cols-4 gap-8 md:gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
           {trendingApp.map((app) => (
             <AppsContainer key={app.id} app={app}></AppsContainer>
           ))}
@@ -47,7 +47,7 @@ const Home = () => {
             <img className="w-8" src={management} alt="" />
           </span>
         </h2>
-        <div className="grid md:grid-cols-4 gap-8 md:gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
           {productivityApp.map((app) => (
             <AppsContainer key={app.id} app={app}></AppsContainer>
           ))}
@@ -60,7 +60,7 @@ const Home = () => {
             <MdOutlineHealthAndSafety color="green" />
           </span>
         </h2>
-        <div className="grid md:grid-cols-4 gap-8 md:gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
           {healthcareApp.map((app) => (
             <AppsContainer key={app.id} app={app}></AppsContainer>
           ))}
@@ -73,7 +73,7 @@ const Home = () => {
             <img className="w-6" src={learning} alt="" />
           </span>
         </h2>
-        <div className="grid md:grid-cols-4 gap-8 md:gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
           {educationApp.map((app) => (
             <AppsContainer key={app.id} app={app}></AppsContainer>
           ))}
