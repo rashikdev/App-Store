@@ -68,6 +68,7 @@ const Navbar = () => {
         </NavLink>
       </div>
       <NavLink
+        onClick={() => window.scrollTo(0, 0)}
         to="/"
         className={({ isActive }) =>
           `${
@@ -80,6 +81,7 @@ const Navbar = () => {
         <h2 className="">Apps</h2>
       </NavLink>
       <NavLink
+        onClick={() => window.scrollTo(0, 0)}
         to="/games"
         className={({ isActive }) =>
           `${
@@ -91,13 +93,17 @@ const Navbar = () => {
       >
         <h2 className="">Games</h2>
       </NavLink>
-      <NavLink className={({ isActive }) =>
+      <NavLink
+        onClick={() => window.scrollTo(0, 0)}
+        className={({ isActive }) =>
           `${
             isActive
               ? "bg-gradient-to-r from-orange-500 to-pink-600 text-white"
               : "md:bg-pink-200 text-black"
           } px-3 py-1 md:px-6 md:py-2 rounded-2xl hidden md:block`
-        } to="/profile">
+        }
+        to="/profile"
+      >
         MyProfile
       </NavLink>
       {/* nav items  end*/}

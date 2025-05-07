@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 const Register = () => {
   const { createUser, updateUser, setUser, user } = use(AuthContext);
   const navigate = useNavigate();
+
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -14,6 +15,18 @@ const Register = () => {
     const password = form.password.value;
     const name = form.name.value;
     const photo_url = form.photo_url.value;
+
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      toast.error("Password must contain at least one uppercase letter");
+      return;
+    } else if (!/[a - z]/.test(password)) {
+      toast.error("Password must contain at least one lowercase letter");
+      return;
+    }
+
     createUser(email, password)
       .then((result) => {
         updateUser({

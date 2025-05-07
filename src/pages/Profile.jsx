@@ -34,11 +34,11 @@ const Profile = () => {
 
   return (
     <div className="mt-20 flex items-center justify-center px-1">
-      <div className="md:min-h-[550px] min-h-[450px] flex flex-col gap-5 shadow-2xl w-[800px] py-9 rounded-2xl border-r-2 border-l-2 border-green-300">
+      <div className="md:min-h-[550px] min-h-[450px] flex flex-col gap-5 shadow-2xl w-[800px] py-9 rounded-2xl md:border-r-5 border-r-3 border-l-3 md:border-l-5 border-green-300 text-white bg-zinc-700">
         <div className="flex justify-between px-4 md:px-16">
           <div className="flex justify-center md:gap-5 gap-4">
             <img
-              className="md:w-[200px] w-[100px] h-[100px] md:h-auto shadow-md rounded-2xl"
+              className="md:w-[200px] w-[100px] h-[100px] md:h-auto rounded-2xl"
               src={photoURL}
               alt="User"
             />
@@ -57,7 +57,7 @@ const Profile = () => {
           </div>
           <button
             onClick={() => setEdit(true)}
-            className="btn btn-accent text-white rounded-2xl px-6"
+            className="btn btn-accent text-white md:rounded-2xl rounded-xl md:px-6"
           >
             Edit
           </button>
@@ -84,7 +84,7 @@ const Profile = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name"
-                  className="md:w-6/8 w-full px-4 py-3 rounded-md border-2 border-accent outline-none"
+                  className="md:w-6/8 w-full px-4 py-3 rounded-md border-2 border-secondary outline-none"
                 />
               </div>
               <div className="space-y-1 text-sm">
@@ -97,20 +97,20 @@ const Profile = () => {
                   value={photo}
                   onChange={(e) => setPhoto(e.target.value)}
                   placeholder="Paste your Photo URL"
-                  className="md:w-6/8 w-full px-4 py-3 rounded-md border-2 border-accent outline-none"
+                  className="md:w-6/8 w-full px-4 py-3 rounded-md border-2 border-secondary outline-none"
                 />
               </div>
               <div className="flex md:gap-9 gap-4">
                 <button
                   type="button"
                   onClick={() => setEdit(false)}
-                  className="btn bg-red-500 hover:bg-red-600 rounded-2xl text-white font-bold"
+                  className="btn bg-red-500 hover:bg-red-600 rounded-2xl text-white font-bold border-1"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="btn btn-secondary rounded-2xl px-6 text-white font-bold"
+                  className="btn btn-secondary rounded-2xl px-6 text-white font-bold border-1 border-white"
                 >
                   Save
                 </button>
