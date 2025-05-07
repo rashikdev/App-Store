@@ -98,7 +98,7 @@ const Login = () => {
         <p className="text-xs md:text-[16px] text-center sm:px-6">
           Don't have an account?
           <Link
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => window.scrollTo({ top: 0,behavior: "smooth" })}
             to="/register"
             rel="noopener noreferrer"
             href="#"

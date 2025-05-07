@@ -123,7 +123,7 @@ const Register = () => {
         <p className="text-xs md:text-[16px] text-center sm:px-6">
           Already have an account?
           <Link
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             to="/login"
             rel="noopener noreferrer"
             href="#"

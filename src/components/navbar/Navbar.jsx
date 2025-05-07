@@ -68,7 +68,7 @@ const Navbar = () => {
         </NavLink>
       </div>
       <NavLink
-        onClick={() => window.scrollTo(0, 0)}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         to="/"
         className={({ isActive }) =>
           `${
@@ -81,7 +81,7 @@ const Navbar = () => {
         <h2 className="">Apps</h2>
       </NavLink>
       <NavLink
-        onClick={() => window.scrollTo(0, 0)}
+        onClick={() => window.scrollTo({ top: 0,behavior: "smooth" })}
         to="/games"
         className={({ isActive }) =>
           `${
@@ -94,7 +94,7 @@ const Navbar = () => {
         <h2 className="">Games</h2>
       </NavLink>
       <NavLink
-        onClick={() => window.scrollTo(0, 0)}
+        onClick={() => window.scrollTo({ top: 0,behavior: "smooth" })}
         className={({ isActive }) =>
           `${
             isActive
@@ -127,7 +127,7 @@ const Navbar = () => {
           </button>
         ) : (
           <NavLink
-            onClick={() => window.scrollTo(0, 0)}
+          onClick={() => window.scrollTo({ top: 0,behavior: "smooth" })}
             className="btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold rounded-full"
             to="/login"
           >
