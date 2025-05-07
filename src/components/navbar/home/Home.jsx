@@ -11,7 +11,6 @@ import TopRattedAppContainer from "../../TopRattedAppContainer";
 
 const Home = () => {
   const appsData = useLoaderData();
-  // console.log(appsData);
   const trendingApp = appsData.filter((app) => app.trending === true);
   const productivityApp = appsData.filter(
     (app) => app.category === "Productivity"

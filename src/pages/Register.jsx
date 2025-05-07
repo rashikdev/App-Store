@@ -3,6 +3,7 @@ import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
 import toast from "react-hot-toast";
+import MoreSignIn from "../components/MoreSignIn";
 
 const Register = () => {
   const { createUser, updateUser, setUser, user } = use(AuthContext);
@@ -106,33 +107,19 @@ const Register = () => {
             Register
           </button>
         </form>
-        <div className="flex items-center pt-4 space-x-1">
-          <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
-          <p className="px-3 text-sm">Register with social accounts</p>
-          <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
-        </div>
-        <div className="flex justify-center space-x-4">
-          <button aria-label="Log in with Google" className="p-3 rounded-sm">
-            <FaGoogle size={20}></FaGoogle>
-          </button>
-          <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
-            <FaTwitter size={20}></FaTwitter>
-          </button>
-          <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
-            <FaGithub size={20}></FaGithub>
-          </button>
-        </div>
-        <p className="text-xs text-center sm:px-6">
-          Already have an account?
-          <Link
-            to="/login"
-            rel="noopener noreferrer"
-            href="#"
-            className=" ml-2 underline text-secondary"
-          >
-            Login
-          </Link>
-        </p>
+        <MoreSignIn title={"Continue with Google"}></MoreSignIn>
+        <p className="text-xs md:text-[16px] text-center sm:px-6">
+        Already have an account?
+        <Link
+          onClick={() => window.scrollTo(0, 0)}
+          to="/login"
+          rel="noopener noreferrer"
+          href="#"
+          className=" ml-2 underline text-secondary"
+        >
+          Login
+        </Link>
+      </p>
       </div>
     </div>
   );

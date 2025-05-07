@@ -88,7 +88,7 @@ const AppDetails = () => {
       {/* Reviews */}
       <div className="min-h-[200px]">
         <h3 className="font-semibold text-lg mb-4">Reviews</h3>
-        <div className="flex md:flex-row flex-col items-center gap-5">
+        <div className="flex flex-col md:flex-row gap-10 itecems-center">
           <div className="md:w-[400px] w-full md:h-[150px] bg-white p-3 md:p-5 rounded-xl shadow-xl shadow-orange-200  border-2 border-orange-200">
             <div className="flex  justify-between items-start">
               <div className="flex items-center gap-3">
@@ -109,7 +109,7 @@ const AppDetails = () => {
             </div>
           </div>
           {isSubmitted && (
-            <div className="w-[80%] md:w-auto py-5">
+            <div className="md:w-auto">
               <ReviewCard
                 submittedComment={submittedComment}
                 ratingValue={ratingValue}
@@ -121,7 +121,10 @@ const AppDetails = () => {
 
       {/* Install Button */}
       <button
-        onClick={() => setInstalled((prv) => !prv)}
+        onClick={() => {
+          setInstalled((prv) => !prv);
+          toast.success(installed ? "App Uninstalled" : "App Installed");
+        }}
         className="bg-primary text-white font-semibold md:text-xl px-4 py-2 md:py-4 rounded-full hover:bg-blue-700 transition duration-100 cursor-pointer w-full md:my-10"
       >
         {installed ? "Uninstall" : "Install"}

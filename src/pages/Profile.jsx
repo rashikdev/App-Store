@@ -3,6 +3,7 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { AuthContext } from "../context/AuthProvider";
 import toast from "react-hot-toast";
+import userLogo from "../assets/user.png";
 
 const Profile = () => {
   const { updateUser } = use(AuthContext);
@@ -28,7 +29,7 @@ const Profile = () => {
       setPhoto("");
       toast.success("Profile updated successfully");
     } catch (error) {
-      console.error("Update failed", error);
+      toast.error("Update failed", error);
     }
   };
 
@@ -39,7 +40,7 @@ const Profile = () => {
           <div className="flex justify-center md:gap-5 gap-4">
             <img
               className="md:w-[200px] w-[100px] h-[100px] md:h-auto rounded-2xl"
-              src={photoURL}
+              src={`${photoURL ? photoURL : userLogo}`}
               alt="User"
             />
             <div className="flex flex-col justify-between md:gap-3 md:p-3">

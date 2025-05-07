@@ -111,7 +111,8 @@ const Navbar = () => {
       <div className="flex items-center gap-3 md:gap-4">
         <img
           title={user?.email}
-          className="md:w-10 w-8 cursor-pointer rounded-full border-2 border-gray-300"
+          className="md:w-10 md:h-10 w-8 h-8 cursor-pointer rounded-full border-2 border-gray-300"
+          // src={user?.photoURL || userLogo}
           src={`${
             user ? (user.photoURL ? user.photoURL : userLogo) : userLogo
           }`}
@@ -126,6 +127,7 @@ const Navbar = () => {
           </button>
         ) : (
           <NavLink
+            onClick={() => window.scrollTo(0, 0)}
             className="btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold rounded-full"
             to="/login"
           >

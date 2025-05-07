@@ -1,13 +1,14 @@
 import React, { use } from "react";
-import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
 import { toast } from "react-hot-toast";
+import MoreSignIn from "../components/MoreSignIn";
 
 const Login = () => {
   const { signIn } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -22,7 +23,6 @@ const Login = () => {
       .catch((error) => {
         console.log(error.message);
       });
-    // console.log(email, password);
   };
   return (
     <div className="md:my-20 mt-14 px-3 md:px-0">
@@ -52,9 +52,6 @@ const Login = () => {
               placeholder="Password"
               className="w-full px-4 py-3 rounded-md border"
             />
-            {/* {errorMessage && (
-              <p className="text-red-500 mt-4">{errorMessage}</p>
-            )} */}
             <div className="flex justify-end text-xs">
               <a rel="noopener noreferrer" href="#">
                 Forgot Password?
@@ -68,33 +65,19 @@ const Login = () => {
             Login
           </button>
         </form>
-        <div className="flex items-center pt-4 space-x-1">
-          <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
-          <p className="px-3 text-sm">Login with social accounts</p>
-          <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
-        </div>
-        <div className="flex justify-center space-x-4">
-          <button aria-label="Log in with Google" className="p-3 rounded-sm">
-            <FaGoogle size={20}></FaGoogle>
-          </button>
-          <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
-            <FaTwitter size={20}></FaTwitter>
-          </button>
-          <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
-            <FaGithub size={20}></FaGithub>
-          </button>
-        </div>
-        <p className="text-xs text-center sm:px-6">
-          Don't have an account?
-          <Link
-            to="/register"
-            rel="noopener noreferrer"
-            href="#"
-            className=" ml-2 underline text-secondary"
-          >
-            Register
-          </Link>
-        </p>
+        <MoreSignIn title={"Login With Google"}></MoreSignIn>
+        <p className="text-xs md:text-[16px] text-center sm:px-6">
+        Don't have an account?
+        <Link
+          onClick={() => window.scrollTo(0, 0)}
+          to="/register"
+          rel="noopener noreferrer"
+          href="#"
+          className=" ml-2 underline text-secondary"
+        >
+          Register
+        </Link>
+      </p>
       </div>
     </div>
   );
