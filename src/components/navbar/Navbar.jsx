@@ -11,7 +11,8 @@ const Navbar = () => {
     logOut();
   };
   return (
-    <div className="bg-base-300 py-4 z-50 px-5 flex justify-between items-center shadow-md font-bold sticky top-0">
+    <div className="bg-base-300/60 backdrop-blur-md py-4 z-50 px-5 flex justify-between items-center shadow-md font-bold sticky top-0"
+>
       {/* nav items  */}
       <div className="flex items-center gap-1">
         <div className="dropdown md:hidden block">
@@ -81,7 +82,7 @@ const Navbar = () => {
         <h2 className="">Apps</h2>
       </NavLink>
       <NavLink
-        onClick={() => window.scrollTo({ top: 0,behavior: "smooth" })}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         to="/games"
         className={({ isActive }) =>
           `${
@@ -94,7 +95,7 @@ const Navbar = () => {
         <h2 className="">Games</h2>
       </NavLink>
       <NavLink
-        onClick={() => window.scrollTo({ top: 0,behavior: "smooth" })}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className={({ isActive }) =>
           `${
             isActive
@@ -127,7 +128,7 @@ const Navbar = () => {
           </button>
         ) : (
           <NavLink
-          onClick={() => window.scrollTo({ top: 0,behavior: "smooth" })}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-bold rounded-full"
             to="/login"
           >

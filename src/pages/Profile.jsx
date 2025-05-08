@@ -34,7 +34,7 @@ const Profile = () => {
 
   return (
     <div className="mt-20 flex items-center justify-center px-1">
-      <div className="md:min-h-[550px] min-h-[450px] flex flex-col gap-5 shadow-2xl w-[800px] py-9 rounded-2xl md:border-r-5 border-r-3 border-l-3 md:border-l-5 border-green-300 text-white bg-zinc-700">
+      <div className="md:min-h-[550px] min-h-[450px] flex flex-col gap-5 w-[800px] py-9 rounded-2xl md:border-r-5 border-r-3 border-l-3 md:border-l-5 border-green-300 text-white bg-gradient-to-br from-zinc-600 via-zinc-800 to-black hover:shadow-[10px_10px_30px_black] transition-shadow duration-300">
         <div className="flex justify-between px-4 md:px-16">
           <div className="flex justify-center md:gap-5 gap-4">
             <img
@@ -61,7 +61,7 @@ const Profile = () => {
               setName("");
               setPhoto("");
             }}
-            className="btn btn-accent text-white md:rounded-2xl rounded-xl md:px-6"
+            className="btn btn-accent text-white md:rounded-2xl rounded-xl md:px-6 transition-all duration-300 hover:scale-94 hover:text-black"
           >
             Edit
           </button>

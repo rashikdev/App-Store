@@ -16,9 +16,10 @@ const DynamicTitle = () => {
       title = "Profile";
     } else if (path === "/games") {
       title = "Games";
-    } else if (path === "/games/:id") {
-      title = "Game Details";
+    } else if (path.startsWith("/app/")) {
+      title = "App Details";
     }
+    
     document.title = `AppStore - ${title}`;
   }, [location]);
   return null;

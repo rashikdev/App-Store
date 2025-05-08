@@ -30,17 +30,10 @@ The purpose of this project is to build an interactive app store where users can
 - **Firebase** (Authentication & Hosting)
 
 # 📡 Firebase
+
 - 🔐 Authentication: Email/Password
 
 - ☁️ Hosting: Deployed via Firebase Hosting
-
-# 🧑‍💻 Author
-
-- 	**Rashik**
-- [Github](https://github.com/rashik218)
-- [Facebook](https://www.facebook.com/share/16Fjh4kbAR/)
-- [Twitter](https://x.com/RashikKhan513)
-
 
 ## 📦 NPM Packages Used
 
@@ -48,3 +41,11 @@ The purpose of this project is to build an interactive app store where users can
 npm install react-router
 npm install react-icons
 npm install react-hot-toast
+
+# 🧑‍💻 Author
+
+- 	**Rashik**
+- [Github](https://github.com/rashik218)
+- [Facebook](https://www.facebook.com/share/16Fjh4kbAR/)
+- [Twitter](https://x.com/RashikKhan513)
+```
