@@ -1,12 +1,50 @@
-# React + Vite
+# AppStore - Assignment 9
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive App Store application built with React and Tailwind CSS. This project is part of Assignment 9 in the frontend development course.
 
-Currently, two official plugins are available:
+## 🔗 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[👉 View Live AppStore](https://app-store-cb5da.web.app/)
 
-## Expanding the ESLint configuration
+## 🎯 Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The purpose of this project is to build an interactive app store where users can browse, view details, and explore games or applications based on categories and ratings.
+
+## 🚀 Key Features
+
+- Dynamic data rendering using props
+- Category-based navigation
+- Loading states and user feedback
+- Responsive design for small, medium and desktop
+- Profile update functionality
+- Scroll-to-top button
+- Reusable components for cards and layouts
+
+## 🛠️ Technologies Used
+
+- **React.js** (Frontend)
+- **Tailwind CSS** (Styling)
+- **React Icons** (UI Icons)
+- **React Router** (For Routing)
+- **React Hot Toast** (Toast notifications)
+- **Firebase** (Authentication & Hosting)
+
+# 📡 Firebase
+- 🔐 Authentication: Email/Password
+
+- ☁️ Hosting: Deployed via Firebase Hosting
+
+# 🧑‍💻 Author
+
+- 	**Rashik**
+- [Github](https://github.com/rashik218)
+- [Facebook](https://www.facebook.com/share/16Fjh4kbAR/)
+- [Twitter](https://x.com/RashikKhan513)
+
+
+## 📦 NPM Packages Used
+
+```bash
+npm install react-router
+npm install react-icons
+npm install react-hot-toast
