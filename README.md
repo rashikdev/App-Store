@@ -1,4 +1,4 @@
-# AppStore - Assignment 9
+# AppStore
 
 A modern and responsive App Store application built with React and Tailwind CSS. This project is part of Assignment 9 in the frontend development course.
 
